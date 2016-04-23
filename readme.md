@@ -8,8 +8,8 @@ The code reuses as much as possible from the default reporter to avoid duplicati
 
 Install:
 
-`npm install stdout-reporter`
+`npm install @peakon/stdout-reporter`
 
 Use as the reporter:
 
-`mocha --reporter stdout-reporter`
+`mocha --reporter @peakon/stdout-reporter`
