@@ -1,6 +1,6 @@
 {
   "name": "@peakon/stdout-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A reporter based on the spec reporter that captures stdout and stderr and only outputs them on failures",
   "main": "index.js",
   "files": [
@@ -33,6 +33,7 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^1.2.0",
     "grunt-release": "^0.13.0",
+    "load-grunt-config": "^0.19.1",
     "mocha": "^2.4.5"
   }
 }
