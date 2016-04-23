@@ -1,0 +1,32 @@
+{
+  "name": "@peakon/stdout-reporter",
+  "version": "1.0.0",
+  "description": "A reporter based on the spec reporter that captures stdout and stderr and only outputs them on failures",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/peakon/stdout-reporter.git"
+  },
+  "keywords": [
+    "mocha",
+    "reporter"
+  ],
+  "author": "Peakon Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peakon/stdout-reporter/issues"
+  },
+  "homepage": "https://github.com/peakon/stdout-reporter#readme",
+  "dependencies": {
+    "intercept-stdout": "^0.1.2"
+  },
+  "peerDependencies": {
+    "mocha": ">=2.0"
+  }
+}
