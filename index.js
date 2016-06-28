@@ -7,30 +7,41 @@ const intercept = require('intercept-stdout');
 class StdoutReporter extends Spec {
 
   constructor(runner) {
-    runner.on('test', test => {
-      test.stdout = '';
-      test.stderr = '';
-
-      this.unhook = intercept(txt => {
-        test.stdout += txt;
-        return '';
-      }, txt => {
-        test.stderr += txt;
-        return '';
-      });
-    });
-
-    runner.on('pass', () => this.unhook());
-    runner.on('fail', () => this.unhook());
+    runner.on('test', test => this.start(test));
+    runner.on('pass', test => this.end());
+    runner.on('fail', test => this.end());
+    runner.on('end', () => this.end());
 
     super(runner);
+  }
+
+  start(test) {
+    test.stdout = '';
+    test.stderr = '';
+
+    this.end();
+
+    this.unhook = intercept(txt => {
+      test.stdout += txt;
+      return '';
+    }, txt => {
+      test.stderr += txt;
+      return '';
+    });
+  }
+
+  end() {
+    if (this.unhook) {
+      this.unhook();
+      delete this.unhook;
+    }
   }
 
   epilogue() {
     super.epilogue();
 
     this.failures.forEach((test, i) => {
-      if (!test.stdout.length && !test.stderr.length) {
+      if (!test.stdout && !test.stderr) {
         return;
       }
 
