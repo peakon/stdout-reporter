@@ -1,6 +1,6 @@
 {
   "name": "@peakon/stdout-reporter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A reporter based on the spec reporter that captures stdout and stderr and only outputs them on failures",
   "main": "index.js",
   "files": [
