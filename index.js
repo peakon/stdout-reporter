@@ -5,7 +5,6 @@ const Spec = require('mocha/lib/reporters/spec');
 const intercept = require('intercept-stdout');
 
 class StdoutReporter extends Spec {
-
   constructor(runner) {
     runner.on('test', test => this.start(test));
     runner.on('pass', test => this.end());

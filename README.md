@@ -1,4 +1,4 @@
-# stdout-reporter
+# @peakon/stdout-reporter
 
 This adds a Mocha reporter based on the default spec reporter, that captures stdout and stderr during test execution, and outputs them only for test failures at the end of the run.
 
