@@ -3,7 +3,7 @@
 const Base = require('mocha/lib/reporters/base');
 const intercept = require('intercept-stdout');
 
-module.exports =   {
+module.exports = {
   wrapReporter(BaseReporter) {
     return class extends BaseReporter {
       constructor(runner) {
@@ -61,4 +61,4 @@ module.exports =   {
       }
     };
   }
-}
+};
