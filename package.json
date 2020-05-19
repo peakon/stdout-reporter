@@ -38,6 +38,9 @@
     "mocha": "^2.4.5"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "spec.js",
+    "dot.js",
+    "interceptor.js"
   ]
 }
